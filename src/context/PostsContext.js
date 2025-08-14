@@ -12,7 +12,7 @@ export const PostsProvider = ({children}) => {
     state: {posts: posts},
     actions: {setPosts: setPosts},
     refetch: {isUpdate: isUpdate, setIsUpdate: setIsUpdate},
-    erorr: {error: error},
+    error: {error: error},
     loading: {loading: loading}
   }
 
@@ -20,7 +20,7 @@ export const PostsProvider = ({children}) => {
     const getPosts = async () => {
       const response = await fetch("https://jsonplaceholder.typicode.com/posts")
       const posts = await response.json()
-      return posts
+      return posts  
     }
 
     getPosts()
@@ -41,3 +41,4 @@ export const PostsProvider = ({children}) => {
     </PostsContext.Provider>
   )
 }
+

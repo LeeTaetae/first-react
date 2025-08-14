@@ -4,12 +4,10 @@ import IntroContainer from "../pages/intro/IntroContainer";
 import HobbyContainer from "../pages/hobby/HobbyContainer";
 import PostListContainer from "../pages/post/list/PostListContainer";
 import PostReadContainer from "../pages/post/read/PostReadContainer";
+import Layout from "../pages/layout/Layout";
 import NotFound from "../pages/notFound/NotFound";
 import PostContainer from "../pages/post/PostContainer";
 import PostContextList from "../pages/post/list/PostContextList";
-import Layout from "../layout/Layout";
-import PostContextRead from "../pages/post/read/PostContextRead";
-import SignUp from "../pages/signUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -40,10 +38,6 @@ const router = createBrowserRouter([
             // index : true
             path: "/community",
             element : <PostContextList />
-          },
-          {
-            path:"/community/read/:postId",
-            element : <PostContextRead />
           }
         ]
       }
@@ -64,10 +58,6 @@ const router = createBrowserRouter([
         ]
       }
     ]
-  },
-  {
-    path:"/sign-up",
-    element:<SignUp />
   },
   {
     path : "*",
